@@ -20,6 +20,7 @@ namespace WpfGallery
     /// </summary>
     public partial class MainWindow : Window
     {
+        public PhotoCollection Photos;
         public MainWindow()
         {
             InitializeComponent();

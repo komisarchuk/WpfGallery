@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Data;
 
 namespace WpfGallery
 {
@@ -17,6 +18,9 @@ namespace WpfGallery
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
+            mainWindow.Photos = (PhotoCollection)(this.Resources["Photo"] as ObjectDataProvider).Data;  //reference to photos from objectDataProvider
+            //it is added to main window
+            mainWindow.Photos.Path = Environment.CurrentDirectory + "\\images";
         }
 
     }
