@@ -148,10 +148,32 @@
                     Name="PhotosListBox"
                     Style="{StaticResource PhotoListBoxStyle}"
                     Margin="5"
-                    ItemsSource="{Binding}"
-                    
+                    ItemsSource="{Binding}"                   
                     />
             </ScrollViewer>
         </GroupBox>
+        <!-- Splitter -->
+        <GridSplitter Grid.Column="1" 
+                      HorizontalAlignment="Left" 
+                      VerticalAlignment="Stretch" 
+                      Width="15" 
+                      Background="Transparent" 
+                      ShowsPreview="True"/>
+        
+    <!--Right Hand Panel -->
+        <DockPanel Grid.Row="0" Grid.Column="1" 
+                   Grid.RowSpan="2" Margin="15, 0, 0, 0">
+            <Label DockPanel.Dock="Left"></Label>
+            <Slider Name="ZoomSlider"
+                    Margin="10, 0, 0, 0"
+                    Orientation="Horizontal"
+                    Minimum="80"
+                    Maximum="320"
+                    Value="160"
+                    TickFrequency="80"
+                    TickPlacement="BottomRight"
+                    SmallChange="5"
+                    LargeChange="20" />
+        </DockPanel>
     </Grid>
 </Window>
