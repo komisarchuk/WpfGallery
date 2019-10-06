@@ -126,7 +126,32 @@
             <Setter Property="FontWeight" Value="Bold" />
         </Style>
     </Window.Resources>
-    <Grid>
-        
+    <Grid Margin="10" DataContext="{Binding Source={StaticResource Photos}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="250"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!-- Photo Management Canvad -->
+        <DockPanel Grid.Column="0" Grid.Row="0" Margin="0, 0, 0, 10">
+            <Button DockPanel.Dock="Right" Width="80">Change</Button>
+            <Label DockPanel.Dock="Left" Margin="0, 0, 10, 0">Path:</Label>
+            <TextBox Name="ImageDir" Margin="10, 0"/>
+        </DockPanel>
+        <GroupBox Grid.Column="0" Grid.Row="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <ListBox 
+                    IsSynchronizedWithCurrentItem="True"
+                    Name="PhotosListBox"
+                    Style="{StaticResource PhotoListBoxStyle}"
+                    Margin="5"
+                    ItemsSource="{Binding}"
+                    
+                    />
+            </ScrollViewer>
+        </GroupBox>
     </Grid>
 </Window>
