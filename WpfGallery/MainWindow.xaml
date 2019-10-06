@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfGallery"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Window.Resources>
         <!-- Photo Template -->
         <DataTemplate DataType="{x:Type local:Photo}">
@@ -137,9 +137,9 @@
         </Grid.RowDefinitions>
         <!-- Photo Management Canvad -->
         <DockPanel Grid.Column="0" Grid.Row="0" Margin="0, 0, 0, 10">
-            <Button DockPanel.Dock="Right" Width="80">Change</Button>
+            <Button DockPanel.Dock="Right" Width="80" Click="Button_Click">Change</Button>
             <Label DockPanel.Dock="Left" Margin="0, 0, 10, 0">Path:</Label>
-            <TextBox Name="ImageDir" Margin="10, 0"/>
+            <TextBox Name="ImagesDir" Margin="10, 0"/>
         </DockPanel>
         <GroupBox Grid.Column="0" Grid.Row="1">
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
