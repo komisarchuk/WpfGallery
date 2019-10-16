@@ -16,11 +16,11 @@ namespace WpfGallery
     {
         void OnApplicationStartup(object sender, StartupEventArgs args)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
-            mainWindow.Photos = (PhotoCollection)(this.Resources["Photos"] as ObjectDataProvider).Data;  //reference to photos from objectDataProvider
-            //it is added to main window
-            mainWindow.Photos.Path = Environment.CurrentDirectory + "\\images";
+            //MainWindow mainWindow = new MainWindow();
+            //mainWindow.Show();
+            //mainWindow.Photos = (PhotoCollection)(this.Resources["Photos"] as ObjectDataProvider).Data;  //reference to photos from objectDataProvider
+            ////it is added to main window
+            //mainWindow.Photos.Path = Environment.CurrentDirectory + "\\images";
         }
 
     }

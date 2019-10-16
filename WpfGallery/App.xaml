@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:WpfGallery"
              Startup="OnApplicationStartup">
     <Application.Resources>
-        <ObjectDataProvider x:Key="Photos" ObjectType="{x:Type local:PhotoCollection}"/>   
+       <!-- <ObjectDataProvider x:Key="Photos" ObjectType="{x:Type local:PhotoCollection}"/>   -->
     </Application.Resources>
 </Application>

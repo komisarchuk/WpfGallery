@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfGallery.Entities;
 
 namespace WpfGallery
 {
@@ -21,8 +22,10 @@ namespace WpfGallery
     public partial class MainWindow : Window
     {
         public PhotoCollection Photos;
+        
         public MainWindow()
         {
+            EFContext _context = new EFContext();
             InitializeComponent();
         }
 
